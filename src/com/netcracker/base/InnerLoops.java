@@ -1,4 +1,4 @@
-package base.ru.netcracker;
+package com.netcracker.base;
 public class InnerLoops {
     public static void main(String[] args) {
 

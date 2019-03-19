@@ -1,4 +1,4 @@
-package base.ru.netcracker;
+package com.netcracker.base;
 import java.util.Random;
 
 public class Branches {

@@ -1,4 +1,4 @@
-package base.ru.netcracker;
+package com.netcracker.base;
 import java.math.BigInteger;
 
 public class Factorial {
