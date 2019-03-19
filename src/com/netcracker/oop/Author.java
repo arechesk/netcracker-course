@@ -1,4 +1,4 @@
-package oop.ru.netcracker;
+package com.netcracker.oop;
 
 public class Author {
     private String name;
