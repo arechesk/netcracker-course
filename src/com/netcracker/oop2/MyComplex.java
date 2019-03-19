@@ -1,4 +1,4 @@
-package oop.ru.netcracker;
+package com.netcracker.oop2;
 
 public class MyComplex {
     private double real=0.0;
@@ -95,7 +95,14 @@ public class MyComplex {
         return new MyComplex(real, -imag);
     }
 
-
-
-
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(real);
+        result = (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(imag);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
 }

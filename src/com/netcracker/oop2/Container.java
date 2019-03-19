@@ -1,4 +1,4 @@
-package oop.ru.netcracker;
+package com.netcracker.oop2;
 
 public class Container {
     private int x1;
@@ -38,5 +38,27 @@ public class Container {
         if (ball.getY() - ball.getRadius() < y1 || y2 < ball.getY() + ball.getRadius())
             return false;
         return true;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Container container = (Container) o;
+
+        if (x1 != container.x1) return false;
+        if (y1 != container.y1) return false;
+        if (x2 != container.x2) return false;
+        return y2 == container.y2;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = x1;
+        result = 31 * result + y1;
+        result = 31 * result + x2;
+        result = 31 * result + y2;
+        return result;
     }
 }
